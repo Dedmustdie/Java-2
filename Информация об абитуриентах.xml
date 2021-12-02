@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<informationAboutApplicants>
+    <Applicant>
+        <FullName>Укпук Еаое Владимирович</FullName>
+        <Math>50</Math>
+        <RussianLanguage>60</RussianLanguage>
+        <Literature>40</Literature>
+	    <EnglishLanguage>30</EnglishLanguage>
+    </Applicant>
+    <Applicant>
+        <FullName>Семен Коао Семенович</FullName>
+        <Math>90</Math>
+        <RussianLanguage>14</RussianLanguage>
+        <EnglishLanguage>15</EnglishLanguage>
+    </Applicant>
+</informationAboutApplicants>
