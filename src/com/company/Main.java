@@ -1,11 +1,11 @@
 package com.company;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         //----------------------<1-ое задание>--------------------------------
         System.out.println("1) Содержимое каталога: ");
         String firstDir = "C:\\Users\\Kensein\\OneDrive\\Рабочий стол\\JAVA 2";
@@ -29,7 +29,7 @@ public class Main {
         String firstDirBuff = firstDir .replaceAll("\\\\", "");
         String returnFirstDir = firstDirBuff.replaceAll(parentOfDir.replaceAll("\\\\", ""), "");
         System.out.println("Переход обратно к " + returnFirstDir);
-        workingDirectory.moveToSubdirectory(returnFirstDir); //изменить!
+        workingDirectory.moveToSubdirectory(returnFirstDir);
 
         String dir = ".idea";
         if (workingDirectory.directoryChecker(dir)) {
@@ -53,9 +53,13 @@ public class Main {
 
         //----------------------<2-ое задание>--------------------------------
 
-        EgeScores egeScores = new EgeScores();
-        egeScores.makeScoreFromTxt("C:\\Users\\Kensein\\OneDrive\\Рабочий стол\\JAVA 2\\Информация об абитуриентах.TXT", "C:\\Users\\Kensein\\OneDrive\\Рабочий стол\\JAVA 2");
+        EgeScoresTXT egeScoresTxt = new EgeScoresTXT("C:\\Users\\Kensein\\Downloads\\Java-2\\Информация о факультетах.TXT");
+        EgeScoresXML egeScoresXml = new EgeScoresXML("C:\\Users\\Kensein\\Downloads\\Java-2\\Информация о факультетах.xml");
 
-        egeScores.makeScoreFromXml("C:\\Users\\Kensein\\OneDrive\\Рабочий стол\\JAVA 2\\Информация об абитуриентах.xml", "C:\\Users\\Kensein\\OneDrive\\Рабочий стол\\JAVA 2");
+        egeScoresTxt.makeScoreFromTxt("C:\\Users\\Kensein\\Downloads\\Java-2\\Информация об абитуриентах.TXT", "C:\\Users\\Kensein\\Downloads\\Java-2");
+        egeScoresTxt.makeScoreFromXml("C:\\Users\\Kensein\\Downloads\\Java-2\\Информация об абитуриентах.xml", "C:\\Users\\Kensein\\Downloads\\Java-2");
+
+        egeScoresXml.makeScoreFromTxt("C:\\Users\\Kensein\\Downloads\\Java-2\\Информация об абитуриентах.TXT", "C:\\Users\\Kensein\\Downloads\\Java-2");
+        egeScoresXml.makeScoreFromXml("C:\\Users\\Kensein\\Downloads\\Java-2\\Информация об абитуриентах.xml", "C:\\Users\\Kensein\\Downloads\\Java-2");
     }
 }
